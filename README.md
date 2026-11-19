@@ -19,6 +19,7 @@ This is adapted from Adafruit's AMG88xx thermal camera example, which was writte
 | <img src="https://cdn-shop.adafruit.com/970x728/64-06.jpg" width="140" alt="Half-size breadboard"> | 2 | Half-size breadboards (one for the Feather, one for the screen) | [adafruit.com/product/64](https://www.adafruit.com/product/64) |
 | | 1 pack | Jumper wires (6"), 8 needed | [adafruit.com/product/1957](https://www.adafruit.com/product/1957) |
 | | 1 | Micro-USB cable (must be a **data** cable, not charge-only) | any |
+| <img src="https://cdn-shop.adafruit.com/970x728/1578-03.jpg" width="140" alt="3.7V 500mAh LiPo battery"> | 1 | *Optional:* 3.7V LiPo battery with JST-PH connector (500mAh shown), to use the camera unplugged | [adafruit.com/product/1578](https://www.adafruit.com/product/1578) |
 
 Part photos are from Adafruit's product pages.
 
@@ -26,7 +27,9 @@ The headers need to be soldered. Unsoldered pins make an on-and-off connection t
 
 ## Wiring
 
-![Wiring diagram](wiring_diagram.png)
+![Breadboard wiring diagram](wiring_diagram.png)
+
+Breadboard 1 holds the Feather with the FeatherWing stacked on top. Breadboard 2 holds the screen. Each wire plugs into the breadboard row of the pin it connects to. The battery is optional.
 
 ### Sensor: stacking the FeatherWing on the Feather
 
@@ -69,6 +72,15 @@ On the screen, leave **3v3, CCS and Lite** unconnected.
 - **RST moved from pin 9 to pin 5.** Pin 9 is connected to the Feather's battery-voltage divider.
 - **The screen runs on 3V** instead of 5V.
 - **Pins 2, 4, 7 and 8 belong to the WiFi chip.** Don't connect anything to them.
+
+### Optional: battery power
+
+To use the camera without a USB cable, plug a **3.7V LiPo battery** into the Feather's JST battery port. No code changes are needed.
+
+- **Use a rechargeable 3.7V LiPo, not a 3V coin cell.** The Feather's battery port and charger are designed for LiPo batteries.
+- **It charges over USB.** When the Feather is plugged into USB, it charges the battery automatically.
+- **Check the polarity on batteries from other brands.** Adafruit batteries match the Feather. Some other brands wire the red and black leads the opposite way, which can damage the board.
+- **Pin 9 can read the battery level**, because it's connected to the battery through a voltage divider. That's why the screen's RST wire was moved off pin 9.
 
 ### The WiFi chip and pin 8
 
