@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 600" font-family="Helvetica, Arial, sans-serif">
+  <rect width="920" height="600" fill="#ffffff"/>
+
+  <!-- ===== WIRES ===== -->
+  <g fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M270 150 H640" stroke="#9467bd"/> <!-- SCK -> SCK -->
+    <path d="M270 190 H640" stroke="#1f77b4"/> <!-- MO -> SI -->
+    <path d="M270 230 H640" stroke="#7f7f7f" stroke-dasharray="10 7"/> <!-- MI -> SO (optional) -->
+    <path d="M270 270 H640" stroke="#17becf"/> <!-- 10 -> TCS -->
+    <path d="M270 310 H640" stroke="#ff7f0e"/> <!-- 6 -> D/C -->
+    <path d="M270 350 H640" stroke="#8c564b"/> <!-- 5 -> RST -->
+    <path d="M270 390 H640" stroke="#d62728"/> <!-- 3V -> Vin -->
+    <path d="M270 430 H640" stroke="#222222"/> <!-- GND -> Gnd -->
+  </g>
+
+  <!-- ===== FEATHER + FEATHERWING STACK ===== -->
+  <rect x="50" y="110" width="220" height="380" rx="14" fill="#1a1a1a"/>
+  <rect x="40" y="100" width="220" height="380" rx="14" fill="#2b2b2b" stroke="#555555" stroke-width="2"/>
+  <rect x="95" y="215" width="70" height="95" rx="6" fill="#c8c8c8" stroke="#888888" stroke-width="2"/>
+  <rect x="115" y="240" width="30" height="35" fill="#444444"/>
+  <text x="130" y="335" fill="#bbbbbb" font-size="12" text-anchor="middle">AMG8833</text>
+
+  <g fill="#ffffff" font-size="16" text-anchor="end">
+    <text x="252" y="156">SCK</text>
+    <text x="252" y="196">MO</text>
+    <text x="252" y="236">MI</text>
+    <text x="252" y="276">10</text>
+    <text x="252" y="316">6</text>
+    <text x="252" y="356">5</text>
+    <text x="252" y="396">3V</text>
+    <text x="252" y="436">GND</text>
+  </g>
+  <g fill="#c9a227">
+    <circle cx="270" cy="150" r="5"/><circle cx="270" cy="190" r="5"/>
+    <circle cx="270" cy="230" r="5"/><circle cx="270" cy="270" r="5"/>
+    <circle cx="270" cy="310" r="5"/><circle cx="270" cy="350" r="5"/>
+    <circle cx="270" cy="390" r="5"/><circle cx="270" cy="430" r="5"/>
+  </g>
+
+  <text x="155" y="40" fill="#222222" font-size="17" font-weight="bold" text-anchor="middle">Feather M0 WiFi</text>
+  <text x="155" y="60" fill="#222222" font-size="15" text-anchor="middle">+ AMG8833 FeatherWing on top</text>
+  <text x="155" y="80" fill="#666666" font-size="12" text-anchor="middle">(sensor connects through the headers)</text>
+
+  <text x="155" y="515" fill="#666666" font-size="12" text-anchor="middle">Do not use pins 2, 4, 7, 8 (WiFi chip)</text>
+
+  <!-- ===== 1.44" TFT SCREEN ===== -->
+  <rect x="640" y="100" width="240" height="380" rx="14" fill="#1f4fbf"/>
+  <rect x="742" y="140" width="125" height="125" fill="#111111" stroke="#cccccc" stroke-width="3"/>
+  <text x="804" y="300" fill="#ffffff" font-size="17" font-weight="bold" text-anchor="middle">1.44" TFT</text>
+  <text x="804" y="320" fill="#d0dcff" font-size="13" text-anchor="middle">ST7735, 128x128</text>
+  <g fill="#ffffff" font-size="16">
+    <text x="658" y="156">SCK</text>
+    <text x="658" y="196">SI</text>
+    <text x="658" y="236">SO</text>
+    <text x="658" y="276">TCS</text>
+    <text x="658" y="316">D/C</text>
+    <text x="658" y="356">RST</text>
+    <text x="658" y="396">Vin</text>
+    <text x="658" y="436">Gnd</text>
+  </g>
+
+  <text x="460" y="570" fill="#555555" font-size="13" text-anchor="middle">Dashed = optional (screen works without SO). Screen pins 3v3, CCS, Lite are left unconnected.</text>
+</svg>
